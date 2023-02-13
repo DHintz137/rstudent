@@ -27,7 +27,7 @@ The \code{spell_LV_inc()} function is used to inspect "INCONCLUSIVE" strings for
 The \code{spell_LV_inc()} function uses Levenshtein distance to calculate the string distance with two different thresholds by which if the threshold is beyond that threshold the string is replaced with "INCONCLUSIVE". This function helps inspect what is deemed "INCONCLUSIVE" and if it can be manually corrected or if a lower threshold classifies all strings correctly.
 }
 \examples{
-dat <- c(NA, "Rawln", NA, NA, "", "Torrinton", "Laraie", "Laamie","Torringtn","Whatld","Rwlins", "(D)", "eryfeb")
+dat <- c(NA, "Rawln", NA, NA, "", "Torrinton", "Laraie", "Laamie","Torringtn","Whatld",\
 corr <- c("Wheatland", "Torrington", "Rawlins", "Laramie")
 spell_LV_inc(dat, corr,3, 9)
 spell_LV_inc(dat, corr,3, 4)
