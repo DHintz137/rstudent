@@ -1,12 +1,13 @@
 Package: rstudent
-Title: Unclear At This Point 
+Title: Tools for students of statistics 
 Version: 0.0.0.1
 Authors@R: 
     person(given = "Daniel",
            family = "Hintz",
            email = "dhintz137@gmail.com",
            role = c("aut", "cre"))
-Description: Gets things done.
+Description: Data wrangling, plotting and formatting tools
+    geared for students of statistics. 
 License: MIT + file LICENSE
 Depends: R (>= 3.6.0)
 Imports: stringdist (>= 0.9.9),
