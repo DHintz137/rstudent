@@ -29,13 +29,15 @@ The \code{spell_LV_inc()} function uses Levenshtein distance to calculate the st
 \examples{
 dat <- c(NA, "", "Torrinton", "Laraie","Whatld","Rwlins", "(D)", "eryfeb")
 corr <- c("Wheatland", "Torrington", "Rawlins", "Laramie")
-spell_LV_inc(dat, corr,3, 9)
+# indentify appropriate sensitivity  
+spell_LV_inc(dat, corr,3, 8)
 spell_LV_inc(dat, corr,3, 4)
-spell_LV_inc(dat, corr)
-spell_LV_inc(dat, corr,2, 4)
-dat <- spell_LV(dat, corr,2)
-dat[c(2,10)]
-dat[c(2,10)] <- c("Rawlins","Wheatland")
+dat <- spell_LV(dat, corr,4)
+
+# replace INCONCLUSIVE results for NA's
+INC <- grep("INCONCLUSIVE", dat)
+dat[INC] <- NA
+dat
 }
 \seealso{
 See documentation for \code{?spell_LV} for underlying mechanics

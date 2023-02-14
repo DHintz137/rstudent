@@ -10,7 +10,7 @@
 #' @param t_high a number to set level for the less sensitive thresholds
 #' @param ... ellipse for end user flexibility 
 #' @seealso See documentation for \code{?spell_LV} for underlying mechanics
-	#' 
+#' 
 #' @author Daniel Hintz
 #' @return a character vector
 #' @export
@@ -18,13 +18,15 @@
 #' @examples
 #' dat <- c(NA, "", "Torrinton", "Laraie","Whatld","Rwlins", "(D)", "eryfeb")
 #' corr <- c("Wheatland", "Torrington", "Rawlins", "Laramie")
-#' spell_LV_inc(dat, corr,3, 9)
+#' # indentify appropriate sensitivity  
+#' spell_LV_inc(dat, corr,3, 8)
 #' spell_LV_inc(dat, corr,3, 4)
-#' spell_LV_inc(dat, corr)
-#' spell_LV_inc(dat, corr,2, 4)
-#' dat <- spell_LV(dat, corr,2)
-#' dat[c(2,10)]
-#' dat[c(2,10)] <- c("Rawlins","Wheatland")
+#' dat <- spell_LV(dat, corr,4)
+#'
+#' # replace INCONCLUSIVE results for NA's
+#' INC <- grep("INCONCLUSIVE", dat)
+#' dat[INC] <- NA
+#' dat
 
 spell_LV_inc <- function(dat, corr,t_low = 3, t_high = 4, ...){
   A <- data.frame(dat,
