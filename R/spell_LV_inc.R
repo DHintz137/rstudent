@@ -16,8 +16,7 @@
 #' @export
 #'
 #' @examples
-#' dat <- c(NA, "Rawln", NA, NA, "", "Torrinton", "Laraie", "Laamie","Torringtn","Whatld",
-#`   "Rwlins", "(D)", "eryfeb")
+#' dat <- c(NA, "", "Torrinton", "Laraie","Whatld","Rwlins", "(D)", "eryfeb")
 #' corr <- c("Wheatland", "Torrington", "Rawlins", "Laramie")
 #' spell_LV_inc(dat, corr,3, 9)
 #' spell_LV_inc(dat, corr,3, 4)
