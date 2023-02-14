@@ -16,14 +16,21 @@
 #' @export
 #'
 #' @examples
+#'
+#' # data with misspelled values
 #' dat <- c(NA, "", "Torrinton", "Laraie","Whatld","Rwlins", "(D)", "eryfeb")
+#'
+#' # vector of correct spelling for each value
 #' corr <- c("Wheatland", "Torrington", "Rawlins", "Laramie")
+#'
 #' # indentify appropriate sensitivity  
 #' spell_LV_inc(dat, corr,3, 8)
 #' spell_LV_inc(dat, corr,3, 4)
+#'
+#' # apply spelling correction
 #' dat <- spell_LV(dat, corr,4)
 #'
-#' # replace INCONCLUSIVE results for NA's
+#' # replace "INCONCLUSIVE" results for NA's
 #' INC <- grep("INCONCLUSIVE", dat)
 #' dat[INC] <- NA
 #' dat
